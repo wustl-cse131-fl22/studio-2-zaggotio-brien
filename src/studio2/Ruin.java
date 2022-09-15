@@ -16,6 +16,7 @@ public class Ruin {
 		double beginningAmount = in.nextDouble();
 		int totalSimulations = 500;
 		int simulationCount = 1;
+		int loseCount = 0;
 
 		for (int i = 0; i < totalSimulations; i++) {
 			double startAmount = beginningAmount;
@@ -33,9 +34,12 @@ public class Ruin {
 					System.out.println("Simulation " + simulationCount + ": " + count + " WIN");
 				} else {
 					System.out.println("Simulation " + simulationCount + ": " + count + " LOSE");
+					loseCount++;
 				}
 				simulationCount++;
 			}
+		System.out.println("Losses: " + loseCount + "Simulations: " + totalSimulations);
+		
 		}
 
 	}
